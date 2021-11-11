@@ -1,6 +1,10 @@
 # Nicholas Wojtowicz
 
+# use winsound to enable .wav files to be played in program
+
 import winsound
+
+#create dictionary for pickups, body, and neck with prices for each key
 
 pickups = {
   "Seymour Duncan Invader": 200,
@@ -24,6 +28,8 @@ neck = {
   "Maple": 200,
   "Rosewood": 170
 }
+
+# balance starts at 0 and money is added to balance for each part selected
 
 balance = 0
 
@@ -65,8 +71,12 @@ def altguitar():
     pickupselecta = input('Bareknuckle Cobra T: $270, DiMarzio Area T: $180, or EMG 85: $200?')
     abalance = balance + pickups[pickupselecta]
 
+# user is prompted to choose a genre
 
 genreselect = input('Select genre of music. Metal, Rock, Jazz, Alternative? ')
+
+# depending on which genre the user selects, the appropriate function
+# will be called
 
 if genreselect == 'Metal':
     winsound.PlaySound("metalpython1.wav", winsound.SND_ASYNC)
